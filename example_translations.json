@@ -1,0 +1,17 @@
+[
+  {
+    "key": "item_management",
+    "lang": "en",
+    "value": "Item Management"
+  },
+  {
+    "key": "order_management",
+    "lang": "zh",
+    "value": "订单管理"
+  },
+  {
+    "key": "marketing_management",
+    "lang": "zh",
+    "value": "营销管理"
+  }
+]

@@ -1,0 +1,68 @@
+spring:
+  application:
+    name: spring-aitest
+  # \u6DFB\u52A0Tomcat\u914D\u7F6E\u652F\u6301\u4E2D\u6587
+  server:
+    servlet:
+      encoding:
+        charset: UTF-8
+        force: true
+        enabled: true
+    tomcat:
+      uri-encoding: UTF-8
+      # 关键配置：允许特殊字符在URL中
+      # relaxed-query-chars: "|,{,},[,],^,`,{,},|,{,},[,],^,`,{,},|,{,},[,],^,`,{,},|,{,},[,],^,`,{,},|,{,},[,],^,`,{,},|,{,},[,],^,`,{,},|,{,},[,],^,`,{,},|,{,},[,],^,`,{,},|,{,},[,],^,`,{,},|,{,},[,],^,"
+
+
+
+
+#  ai:
+#    deepseek:
+#      api-key: sk-0162049e4e7843d7ae02125943ff0b3f
+#      chat:
+#        options:
+#          model: deepseek-chat
+#          temperature: 0.8
+
+  ai:
+    openai: # \u6539\u4E3Aopenai
+      api-key: sk-59ee35d9b10c4de59608423d988bf574
+#      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      chat:
+        options:
+          model: qwen-plus
+          temperature: 0.7
+#    bedrock:
+#      aws:
+#        access-key: ${AWS_ACCESS_KEY_ID}
+#        secret-key: ${AWS_SECRET_ACCESS_KEY}
+#        region: eu-central-1
+#        session-token: ${AWS_SESSION_TOKEN}
+#      converse:
+#        chat:
+#          options:
+#            temperature: 0.8
+#            top-k: 15
+
+
+
+## Spring AI\u914D\u7F6E
+#spring.ai.openai.api-key=sk-59ee35d9b10c4de59608423d988bf574
+#spring.ai.openai.base-url=https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+#spring.ai.openai.chat.options.model=qwen-plus
+#
+#
+## ChatClient\u914D\u7F6E - \u4F7F\u7528\u6B63\u786E\u7684\u914D\u7F6Ekey
+#spring.ai.chat.client.enabled=true
+#spring.ai.chat.client.default-system-prompt=\u4F60\u662F\u4E00\u4E2A\u6709\u7528\u7684AI\u52A9\u624B
+#spring.ai.chat.client.default-options.model=qwen-plus
+#spring.ai.chat.client.default-options.temperature=0.7
+
+
+
+
+
+# \u65E5\u5FD7\u914D\u7F6E
+#logging.level.org.springframework.ai=DEBUG
+#logging.level.com.example.springaitest=DEBUG
