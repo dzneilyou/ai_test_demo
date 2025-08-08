@@ -1,16 +1,11 @@
 package com.example.springaitest;
 
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.content.Media;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 
 /**
@@ -20,13 +15,14 @@ import reactor.core.publisher.Flux;
  * @version 1.0
  */
 @RestController
-public class AiController {
+@RequestMapping(value = "openai")
+public class OpenAiController {
 
     private final ChatClient chatClient;
 
 
 
-    public AiController(ChatClient.Builder chatClientBuilder) {
+    public OpenAiController(ChatClient.Builder chatClientBuilder) {
         this.chatClient = chatClientBuilder.build();
     }
 
@@ -226,4 +222,4 @@ public class AiController {
                 4. 添加向量数据库支持
                 """;
     }
-} 
+}

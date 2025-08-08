@@ -33,6 +33,13 @@ spring:
         options:
           model: qwen-plus
           temperature: 0.7
+    zhipuai:
+      api-key: b7258390c012413dbc8264d70d14f7bd.WJzQAJrP1jMZ078U
+      chat:
+        options:
+          model: glm-4-air
+          temperature: 0.4
+
 #    bedrock:
 #      aws:
 #        access-key: ${AWS_ACCESS_KEY_ID}
